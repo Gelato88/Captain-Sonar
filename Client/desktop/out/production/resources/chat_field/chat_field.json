@@ -1,0 +1,21 @@
+{
+com.badlogic.gdx.graphics.g2d.BitmapFont: {
+	default-font: {
+		"file": "font.fnt"
+	}
+},
+com.badlogic.gdx.graphics.Color: {
+	"white": {
+		"r": 1.0, "g": 1.0, "b": 1.0, "a": 1
+	}
+},
+com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle: {
+	default: {
+		"background": "chat_field",
+		"cursor": "chat_cursor",
+		"selection": "chat_selection",
+		"fontColor": "white",
+		"font": "default-font"
+	}
+}
+}

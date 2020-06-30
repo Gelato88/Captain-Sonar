@@ -1,0 +1,26 @@
+chat_field.png
+size: 698, 40
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chat_cursor
+  rotate: false
+  xy: 0, 0
+  size: 2, 40
+  orig: 2, 40
+  offset: 0, 0
+  index: -1
+chat_field
+  rotate: false
+  xy: 2, 0
+  size: 680, 40
+  orig: 680, 40
+  offset: 0, 0
+  index: -1
+chat_selection
+  rotate: false
+  xy: 682, 0
+  size: 16, 40
+  orig: 16, 40
+  offset: 0, 0
+  index: -1
