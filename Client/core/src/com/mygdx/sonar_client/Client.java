@@ -12,13 +12,11 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
-import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.TextField;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
@@ -26,19 +24,16 @@ public class Client extends ApplicationAdapter {
 	private SpriteBatch batch;
 	private ShapeRenderer sr;
 
-	Texture img;
+	private InputHandler inputHandler;
 
 	private Socket s;
 	private OutputStream output;
 	private PrintWriter writer;
 	private Scanner scanner;
-	public static InputThread inputHandler;
-	//public static OutputThread outputHandler;
+	public static InputThread inputThread;
 
 	private BitmapFont font;
 	private GlyphLayout layout;
-
-	public static String lastMessage;
 
 	private Stage stage;
 	private TextField field;
@@ -53,19 +48,12 @@ public class Client extends ApplicationAdapter {
 	@Override
 	public void create () {
 
-
-
-
-		lastMessage = "Enter name.";
+		inputHandler = new InputHandler(this);
 
 		batch = new SpriteBatch();
 		sr = new ShapeRenderer();
-
 		font = new BitmapFont();
 		layout = new GlyphLayout();
-
-		lastMessage = "";
-
 		stage = new Stage();
 
 		Skin chatDownSkin = new Skin(Gdx.files.internal("chat_down/chat_down.json"));
@@ -117,16 +105,13 @@ public class Client extends ApplicationAdapter {
 			messages[i] = "";
 		}
 
-
 		try {
 			s = new Socket(InetAddress.getByName(Settings.IP), Settings.PORT);
 			output = s.getOutputStream();
 			writer = new PrintWriter(output, true);
 
-			inputHandler = new InputThread(s, this);
-			//outputHandler = new OutputThread(s);
-			inputHandler.start();
-			//outputHandler.start();
+			inputThread = new InputThread(s, this);
+			inputThread.start();
 
 
 			scanner = new Scanner(System.in);
@@ -142,10 +127,14 @@ public class Client extends ApplicationAdapter {
 	 *
 	 */
 	public void send() {
-		System.out.println("SEND");
 		String message = field.getText();
-		writer.println(message);
-		field.setText("");
+		if(!message.equals("")) {
+			writer.println(message);
+			field.setText("");
+		}
+		if(message.equals("exit")) {
+			inputThread.exit();
+		}
 	}
 
 	/* Adds a chat message and cycles all other chat messages down.
@@ -178,6 +167,9 @@ public class Client extends ApplicationAdapter {
 
 	@Override
 	public void render () {
+
+		inputHandler.update();
+
 		Gdx.gl.glClearColor(1, 0, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
@@ -198,8 +190,6 @@ public class Client extends ApplicationAdapter {
 		layout.setText(font, "texting is epic and making a good gui is for losers");
 		font.draw(batch, layout, 700, 50);
 
-
-
 		font.setColor(Color.WHITE);
 		for(int i = 0; i < Settings.CHAT_HEIGHT; i++) {
 			layout.setText(font, messages[message + i]);
@@ -210,18 +200,15 @@ public class Client extends ApplicationAdapter {
 
 		batch.begin();
 		batch.enableBlending();
-
 		stage.act();
 		stage.draw();
-
-
 		batch.end();
 	}
 	
 	@Override
 	public void dispose () {
 		batch.dispose();
-		img.dispose();
+		sr.dispose();
 	}
 
 }

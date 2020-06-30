@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f6b66e8-471c-461f-8676-ab0a8a6ca978" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Client/core/src/com/mygdx/sonar_client/InputHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/core/src/com/mygdx/sonar_client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/core/src/com/mygdx/sonar_client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/core/src/com/mygdx/sonar_client/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/core/src/com/mygdx/sonar_client/Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/core/src/com/mygdx/sonar_client/InputHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/core/src/com/mygdx/sonar_client/InputHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/core/src/com/mygdx/sonar_client/InputThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/core/src/com/mygdx/sonar_client/InputThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/core/src/com/mygdx/sonar_client/OutputThread.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -195,12 +195,12 @@
       <workItem from="1592709043372" duration="10302000" />
       <workItem from="1593316268950" duration="6748000" />
       <workItem from="1593490228180" duration="5198000" />
-      <workItem from="1593546498123" duration="5394000" />
+      <workItem from="1593546498123" duration="6003000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27642000" />
+    <option name="totallyTimeSpent" value="28251000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1374" y="-8" width="1382" height="784" extended-state="6" />

@@ -1,5 +1,8 @@
 package com.mygdx.sonar_client;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
+
 public class InputHandler {
 
     private Client client;
@@ -8,5 +11,10 @@ public class InputHandler {
         this.client = client;
     }
 
+    public void update() {
+        if(Gdx.input.isKeyJustPressed(Input.Keys.ENTER)) {
+            client.send();
+        }
+    }
 
 }

@@ -25,11 +25,6 @@ public class InputThread extends Thread {
                 BufferedReader reader = new BufferedReader(new InputStreamReader(input));
 
                 text = reader.readLine();
-                if(text == null) {
-                    System.out.println("null");
-                } else {
-                    System.out.println(text);
-                }
                 if(text != null) {
                     client.addMessage(text);
                 }
@@ -38,5 +33,9 @@ public class InputThread extends Thread {
                 e.printStackTrace();
             }
         }
+    }
+
+    public void exit() {
+        stop = true;
     }
 }
