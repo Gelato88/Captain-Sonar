@@ -28,8 +28,6 @@ public class Client extends ApplicationAdapter {
 
 	Texture img;
 
-	private static int PORT = 24644;
-
 	private Socket s;
 	private OutputStream output;
 	private PrintWriter writer;
@@ -121,7 +119,7 @@ public class Client extends ApplicationAdapter {
 
 
 		try {
-			s = new Socket(InetAddress.getByName("192.168.2.115"), PORT);
+			s = new Socket(InetAddress.getByName(Settings.IP), Settings.PORT);
 			output = s.getOutputStream();
 			writer = new PrintWriter(output, true);
 
@@ -148,7 +146,6 @@ public class Client extends ApplicationAdapter {
 		String message = field.getText();
 		writer.println(message);
 		field.setText("");
-		button.setChecked(false);
 	}
 
 	/* Adds a chat message and cycles all other chat messages down.

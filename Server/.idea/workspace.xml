@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3f6b66e8-471c-461f-8676-ab0a8a6ca978" name="Default Changelist" comment="" />
+    <list default="true" id="3f6b66e8-471c-461f-8676-ab0a8a6ca978" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Client/core/src/com/mygdx/sonar_client/InputHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/core/src/com/mygdx/sonar_client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/core/src/com/mygdx/sonar_client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/core/src/com/mygdx/sonar_client/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/core/src/com/mygdx/sonar_client/Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -106,6 +112,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -126,6 +135,7 @@
     <option name="width" value="1382" />
     <option name="height" value="784" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -185,12 +195,12 @@
       <workItem from="1592709043372" duration="10302000" />
       <workItem from="1593316268950" duration="6748000" />
       <workItem from="1593490228180" duration="5198000" />
-      <workItem from="1593546498123" duration="4520000" />
+      <workItem from="1593546498123" duration="5394000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26768000" />
+    <option name="totallyTimeSpent" value="27642000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1374" y="-8" width="1382" height="784" extended-state="6" />
