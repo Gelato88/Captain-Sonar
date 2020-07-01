@@ -12,7 +12,7 @@ public class InputHandler {
     }
 
     public void update() {
-        if(Gdx.input.isKeyJustPressed(Input.Keys.ENTER) && client.field.isTouchFocusTarget()) {
+        if(Gdx.input.isKeyJustPressed(Input.Keys.ENTER) && client.field.hasKeyboardFocus()) {
             client.send();
         }
     }
