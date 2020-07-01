@@ -204,6 +204,11 @@ public class Client extends ApplicationAdapter {
 		stage.draw();
 		batch.end();
 	}
+
+	@Override
+	public void resize(int width, int height) {
+		stage.getViewport().update(width, height, true);
+	}
 	
 	@Override
 	public void dispose () {
