@@ -5,34 +5,25 @@ public class ServerThread extends Thread {
 
     private Socket socket;
     private String name;
-    private ServerThread connection;
-    private Socket connect;
-    private String connected;
+
+    private BufferedReader reader;
+    private InputStream input;
+    private OutputStream output;
+    private PrintWriter writer;
 
     public ServerThread(Socket socket) {
         this.socket = socket;
-        connect = null;
     }
 
-    public String getUsername() {
-        return name;
-    }
-
-    public Socket getSocket() {
-        return socket;
-    }
-
+    @Override
     public void run() {
         try {
-            InputStream input = socket.getInputStream();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(input));
+            input = socket.getInputStream();
+            reader = new BufferedReader(new InputStreamReader(input));
+            output = socket.getOutputStream();
+            writer = new PrintWriter(output, true);
 
-            OutputStream output = socket.getOutputStream();
-            PrintWriter writer = new PrintWriter(output, true);
-
-            writer.println("Enter your name.");
-            name = reader.readLine();
-            System.out.println("Received name " + name);
+            requestName();
 
             String text;
 
@@ -40,34 +31,43 @@ public class ServerThread extends Thread {
 
                 text = reader.readLine();
                 System.out.println(name + ": " + text);
-
-                if(text.equals("connect")) {
-                    writer.println("Who do you want to connect to?");
-                    connected = reader.readLine();
-                    for(ServerThread thread : Main.users) {
-                        if (thread.getUsername().equals(connected)) {
-                            writer.println("You are now sending messages to: " + connected);
-                            connection = thread;
-                        }
-                    }
-                }
-
-                else if(connection != null) {
-                    OutputStream send = connection.getSocket().getOutputStream();
-                    PrintWriter sender = new PrintWriter(send, true);
-                    sender.println(name + ": " + text);
-                    writer.println("Your message was sent to " + connected);
-                }
-
-                else {
-                    writer.println("Server: " + text);
-                }
-
+                sendToAll(text);
             } while(!text.equals("exit"));
             socket.close();
         } catch(IOException e) {
             System.out.println("Server exception: " + e.getMessage());
             e.printStackTrace();
+        }
+    }
+
+    /* Asks for and assigns the user a name.
+     *
+     */
+    public void requestName() {
+        try {
+            writer.println("Server: Enter your name.");
+            name = reader.readLine();
+            System.out.println("Received name " + name + ".");
+            writer.println("Server: Received name " + name + ".");
+        } catch(IOException e) {
+            System.out.println("Server exception: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    /* Sends a message to this user.
+     *
+     */
+    public void sendMessage(String str) {
+        writer.println(str);
+    }
+
+    /* Sends a message to all connected users.
+     *
+     */
+    public void sendToAll(String str) {
+        for(ServerThread user : Main.users) {
+            user.sendMessage(name + ": " + str);
         }
     }
 

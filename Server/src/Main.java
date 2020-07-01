@@ -23,6 +23,5 @@ public class Main {
             System.out.println("Server exception: " + e.getMessage());
             e.printStackTrace();
         }
-
     }
 }
