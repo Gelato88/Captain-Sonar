@@ -36,7 +36,7 @@ public class Client extends ApplicationAdapter {
 	private GlyphLayout layout;
 
 	private Stage stage;
-	private TextField field;
+	public TextField field;
 
 	private Button chatUp;
 	private Button chatDown;
