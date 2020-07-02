@@ -3,7 +3,7 @@ package com.mygdx.sonar_client;
 public class Settings {
 
     public static final int PORT = 6000;
-    public static final String IP = "";
+    public static final String IP = "70.181.187.86";
 
     public static final int RES_WIDTH = 1366;
     public static final int RES_HEIGHT = 768;
