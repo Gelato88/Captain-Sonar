@@ -5,6 +5,7 @@ public class ServerThread extends Thread {
 
     private Socket socket;
     private String name;
+    private boolean running;
 
     private BufferedReader reader;
     private InputStream input;
@@ -17,6 +18,7 @@ public class ServerThread extends Thread {
 
     @Override
     public void run() {
+        running = true;
         try {
             input = socket.getInputStream();
             reader = new BufferedReader(new InputStreamReader(input));
@@ -28,11 +30,16 @@ public class ServerThread extends Thread {
             String text;
 
             do {
-
                 text = reader.readLine();
                 System.out.println(name + ": " + text);
                 sendToAll(text);
-            } while(!text.equals("exit"));
+
+                if(text.equals("close server")) {
+                    Main.sendFromServerToAll("Shutting down...");
+                    Main.quit();
+                }
+
+            } while(!text.equals("exit") && running);
             socket.close();
         } catch(IOException e) {
             System.out.println("Server exception: " + e.getMessage());
@@ -53,6 +60,10 @@ public class ServerThread extends Thread {
             System.out.println("Server exception: " + e.getMessage());
             e.printStackTrace();
         }
+    }
+
+    public void close() {
+        running = false;
     }
 
     /* Sends a message to this user.

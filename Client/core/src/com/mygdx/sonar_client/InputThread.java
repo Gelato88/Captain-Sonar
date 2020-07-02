@@ -28,6 +28,9 @@ public class InputThread extends Thread {
                 if(text != null) {
                     client.addMessage(text);
                 }
+                if(text.equals("Server: Shutting down...")) {
+                    stop = true;
+                }
             } catch (IOException e) {
                 System.out.println("Exception: " + e.getMessage());
                 e.printStackTrace();

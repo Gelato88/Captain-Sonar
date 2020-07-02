@@ -2,13 +2,11 @@ package com.mygdx.sonar_client;
 
 import java.io.*;
 import java.net.*;
-import java.util.*;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -29,7 +27,6 @@ public class Client extends ApplicationAdapter {
 	private Socket s;
 	private OutputStream output;
 	private PrintWriter writer;
-	private Scanner scanner;
 	public static InputThread inputThread;
 
 	private BitmapFont font;
@@ -109,12 +106,9 @@ public class Client extends ApplicationAdapter {
 			s = new Socket(InetAddress.getByName(Settings.IP), Settings.PORT);
 			output = s.getOutputStream();
 			writer = new PrintWriter(output, true);
-
 			inputThread = new InputThread(s, this);
 			inputThread.start();
 
-
-			scanner = new Scanner(System.in);
 		} catch(UnknownHostException e) {
 			System.out.println("Server not found: " + e.getMessage());
 		} catch(IOException e) {
