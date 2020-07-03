@@ -41,8 +41,6 @@ public class Client extends ApplicationAdapter {
 	private Button chatDown;
 	private Button chatSend;
 
-	private Button test;
-
 	private String messages[];
 	private int message = 0;
 
@@ -50,6 +48,8 @@ public class Client extends ApplicationAdapter {
 
 	@Override
 	public void create () {
+
+		Assets.load();
 
 		inputHandler = new InputHandler(this);
 		inputMultiplexer = new InputMultiplexer();
@@ -60,18 +60,15 @@ public class Client extends ApplicationAdapter {
 		layout = new GlyphLayout();
 		stage = new Stage();
 
-		Skin chatDownSkin = new Skin(Gdx.files.internal("chat_down/chat_down.json"));
-		Skin chatUpSkin = new Skin(Gdx.files.internal("chat_up/chat_up.json"));
-		Skin chatSendSkin = new Skin(Gdx.files.internal("chat_send/chat_send.json"));
 		Skin chatFieldSkin = new Skin(Gdx.files.internal("chat_field/chat_field.json"));
 
 		field = new TextField("testing", chatFieldSkin);
 		field.setPosition(5, 5);
 		field.setSize(340, 20);
 
-		chatDown = new Button(chatDownSkin);
-		chatUp = new Button(chatUpSkin);
-		chatSend = new Button(chatSendSkin);
+		chatDown = new Button(Assets.buttonSkin, "chat_down");
+		chatUp = new Button(Assets.buttonSkin, "chat_up");
+		chatSend = new Button(Assets.buttonSkin, "chat_send");
 		chatDown.setSize(20, 20);
 		chatUp.setSize(20, 20);
 		chatSend.setSize(20, 20);

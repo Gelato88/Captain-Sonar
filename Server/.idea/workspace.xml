@@ -7,10 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f6b66e8-471c-461f-8676-ab0a8a6ca978" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Client/core/src/com/mygdx/sonar_client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/core/src/com/mygdx/sonar_client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/core/assets/gimp_files/chat_button.xcf" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/core/assets/gimp_files/chat_button.xcf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/core/src/com/mygdx/sonar_client/RadioOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/core/src/com/mygdx/sonar_client/RadioOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/core/src/com/mygdx/sonar_client/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/core/src/com/mygdx/sonar_client/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/core/src/com/mygdx/sonar_client/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/core/src/com/mygdx/sonar_client/Settings.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,7 +50,7 @@
     <session id="181142897">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.56" value="1" />
@@ -219,7 +217,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1374" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1323752" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -230,7 +227,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />

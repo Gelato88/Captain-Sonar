@@ -1,9 +1,0 @@
-{
-com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
-	default: { 
-		"down": "chat_send_clicked",
-		"up": "chat_send_unclicked",
-		"over": "chat_send_hover"
-	}
-}
-}

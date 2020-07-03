@@ -1,0 +1,27 @@
+{
+com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
+	"chat_down": {
+		"up": "chat_down_unclicked",
+		"down": "chat_down_clicked",
+		"disabled": "chat_down_disabled",
+		"over": "chat_down_hover"
+	},
+	"chat_up": {
+		"up": "chat_up_unclicked",
+		"down": "chat_up_clicked",
+		"disabled": "chat_up_disabled",
+		"over": "chat_up_hover"
+	},
+	"chat_send": {
+		"up": "chat_send_unclicked",
+		"down": "chat_send_clicked",
+		"over": "chat_send_hover"
+	}
+	"marker": {
+		"up": "marker_blank",
+		"checked": "marker_marked",
+		"over": "marker_blank_hover",
+		"checkedOver": "marker_marked_hover"
+	}
+}
+}
