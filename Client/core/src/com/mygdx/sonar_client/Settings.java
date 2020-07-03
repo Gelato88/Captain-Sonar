@@ -13,6 +13,7 @@ public class Settings {
     public static final float CHAT_BOX_WIDTH = 400;
     public static final float CHAT_BOX_HEIGHT = CHAT_HEIGHT * 20 + 40;
 
+    public static final int BOARD_GRID_LENGTH = 15;
     public static final float BOARD_FOCUS_WIDTH = 600;
     public static final float BOARD_FOCUS_HEIGHT = 600;
 }

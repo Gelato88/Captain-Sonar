@@ -1,27 +1,52 @@
 {
 com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
-	"chat_down": {
-		"up": "chat_down_unclicked",
-		"down": "chat_down_clicked",
-		"disabled": "chat_down_disabled",
-		"over": "chat_down_hover"
+	chat_down: {
+		up: chat_down_unclicked,
+		down: chat_down_clicked,
+		disabled: chat_down_disabled,
+		over: chat_down_hover
 	},
-	"chat_up": {
-		"up": "chat_up_unclicked",
-		"down": "chat_up_clicked",
-		"disabled": "chat_up_disabled",
-		"over": "chat_up_hover"
+	chat_up: {
+		up: chat_up_unclicked,
+		down: chat_up_clicked,
+		disabled: chat_up_disabled,
+		over: chat_up_hover
 	},
-	"chat_send": {
-		"up": "chat_send_unclicked",
-		"down": "chat_send_clicked",
-		"over": "chat_send_hover"
-	}
-	"marker": {
-		"up": "marker_blank",
-		"checked": "marker_marked",
-		"over": "marker_blank_hover",
-		"checkedOver": "marker_marked_hover"
+	chat_send: {
+		up: chat_send_unclicked,
+		down: chat_send_clicked,
+		over: chat_send_hover
+	},
+	marker: {
+		up: marker_blank,
+		checked: marker_marked,
+		over: marker_blank_hover,
+		checkedOver: marker_marked_hover
+	},
+	rad_op_up: {
+		up: rad_op_up_unclicked,
+		down: rad_op_up_clicked,
+		over: rad_op_up_hover
+	},
+	rad_op_down: {
+		up: rad_op_down_unclicked,
+		down: rad_op_down_clicked,
+		over: rad_op_down_hover
+	},
+	rad_op_left: {
+		up: rad_op_left_unclicked,
+		down: rad_op_left_clicked,
+		over: rad_op_left_hover
+	},
+	rad_op_right: {
+		up: rad_op_right_unclicked,
+		down: rad_op_right_clicked,
+		over: rad_op_right_hover
+	},
+	rad_op_clear: {
+		up: rad_op_clear_unclicked,
+		down: rad_op_clear_clicked,
+		over: rad_op_clear_hover
 	}
 }
 }

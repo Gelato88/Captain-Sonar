@@ -1,5 +1,5 @@
 buttons.png
-size: 880, 400
+size: 480, 1120
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -47,119 +47,168 @@ chat_send_hover
   index: -1
 chat_send_unclicked
   rotate: false
-  xy: 480, 0
+  xy: 0, 80
   size: 80, 80
   orig: 80, 80
   offset: 0, 0
   index: -1
 chat_up_clicked
   rotate: false
-  xy: 560, 0
+  xy: 80, 80
   size: 80, 80
   orig: 80, 80
   offset: 0, 0
   index: -1
 chat_up_disabled
   rotate: false
-  xy: 640, 0
+  xy: 160, 80
   size: 80, 80
   orig: 80, 80
   offset: 0, 0
   index: -1
 chat_up_hover
   rotate: false
-  xy: 720, 0
+  xy: 240, 80
   size: 80, 80
   orig: 80, 80
   offset: 0, 0
   index: -1
 chat_up_unclicked
   rotate: false
-  xy: 800, 0
+  xy: 320, 80
   size: 80, 80
   orig: 80, 80
   offset: 0, 0
   index: -1
-down_arrow
-  rotate: false
-  xy: 0, 80
-  size: 160, 160
-  orig: 160, 160
-  offset: 0, 0
-  index: -1
-down_arrow_hover
-  rotate: false
-  xy: 160, 80
-  size: 160, 160
-  orig: 160, 160
-  offset: 0, 0
-  index: -1
-left_arrow
-  rotate: false
-  xy: 320, 80
-  size: 160, 160
-  orig: 160, 160
-  offset: 0, 0
-  index: -1
-left_arrow_hover
-  rotate: false
-  xy: 480, 80
-  size: 160, 160
-  orig: 160, 160
-  offset: 0, 0
-  index: -1
 marker_blank
   rotate: false
-  xy: 640, 80
+  xy: 400, 80
   size: 80, 80
   orig: 80, 80
   offset: 0, 0
   index: -1
 marker_blank_hover
   rotate: false
-  xy: 720, 80
+  xy: 0, 160
   size: 80, 80
   orig: 80, 80
   offset: 0, 0
   index: -1
 marker_marked
   rotate: false
-  xy: 800, 80
+  xy: 80, 160
   size: 80, 80
   orig: 80, 80
   offset: 0, 0
   index: -1
 marker_marked_hover
   rotate: false
-  xy: 0, 240
+  xy: 160, 160
   size: 80, 80
   orig: 80, 80
   offset: 0, 0
   index: -1
-right_arrow
+rad_op_clear_clicked
   rotate: false
-  xy: 80, 240
+  xy: 240, 160
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
-right_arrow_hover
+rad_op_clear_hover
   rotate: false
-  xy: 240, 240
+  xy: 0, 320
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
-up_arrow
+rad_op_clear_unclicked
   rotate: false
-  xy: 400, 240
+  xy: 160, 320
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
-up_arrow_hover
+rad_op_down_clicked
   rotate: false
-  xy: 560, 240
+  xy: 320, 320
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+rad_op_down_hover
+  rotate: false
+  xy: 0, 480
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+rad_op_down_unclicked
+  rotate: false
+  xy: 160, 480
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+rad_op_left_clicked
+  rotate: false
+  xy: 320, 480
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+rad_op_left_hover
+  rotate: false
+  xy: 0, 640
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+rad_op_left_unclicked
+  rotate: false
+  xy: 160, 640
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+rad_op_right_clicked
+  rotate: false
+  xy: 320, 640
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+rad_op_right_hover
+  rotate: false
+  xy: 0, 800
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+rad_op_right_unclicked
+  rotate: false
+  xy: 160, 800
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+rad_op_up_clicked
+  rotate: false
+  xy: 320, 800
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+rad_op_up_hover
+  rotate: false
+  xy: 0, 960
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+rad_op_up_unclicked
+  rotate: false
+  xy: 160, 960
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
