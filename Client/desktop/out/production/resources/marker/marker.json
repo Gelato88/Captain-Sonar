@@ -1,0 +1,10 @@
+{
+com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
+	default: { 
+		"up": "marker_blank",
+		"checked": "marker_marked",
+		"over": "marker_blank_hover",
+		"checkedOver": "marker_marked_hover"
+	}
+}
+}

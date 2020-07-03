@@ -5,6 +5,7 @@ import java.net.*;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -23,6 +24,7 @@ public class Client extends ApplicationAdapter {
 	private ShapeRenderer sr;
 
 	private InputHandler inputHandler;
+	private InputMultiplexer inputMultiplexer;
 
 	private Socket s;
 	private OutputStream output;
@@ -39,13 +41,18 @@ public class Client extends ApplicationAdapter {
 	private Button chatDown;
 	private Button chatSend;
 
+	private Button test;
+
 	private String messages[];
 	private int message = 0;
+
+	private Role role;
 
 	@Override
 	public void create () {
 
 		inputHandler = new InputHandler(this);
+		inputMultiplexer = new InputMultiplexer();
 
 		batch = new SpriteBatch();
 		sr = new ShapeRenderer();
@@ -95,12 +102,17 @@ public class Client extends ApplicationAdapter {
 		stage.addActor(chatUp);
 		stage.addActor(chatSend);
 		stage.addActor(field);
-		Gdx.input.setInputProcessor(stage);
 
 		messages = new String[Settings.CHAT_HISTORY_LENGTH];
 		for(int i = 0; i < messages.length; i++) {
 			messages[i] = "";
 		}
+
+		role = new RadioOperator(batch);
+
+		inputMultiplexer.addProcessor(stage);
+		inputMultiplexer.addProcessor(role.getStage());
+		Gdx.input.setInputProcessor(inputMultiplexer);
 
 		try {
 			s = new Socket(InetAddress.getByName(Settings.IP), Settings.PORT);
@@ -192,6 +204,8 @@ public class Client extends ApplicationAdapter {
 
 		batch.end();
 
+		role.update();
+
 		batch.begin();
 		batch.enableBlending();
 		stage.act();
@@ -202,6 +216,7 @@ public class Client extends ApplicationAdapter {
 	@Override
 	public void resize(int width, int height) {
 		stage.getViewport().update(width, height, true);
+		role.getStage().getViewport().update(width, height, true);
 	}
 	
 	@Override
