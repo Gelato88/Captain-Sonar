@@ -1,7 +1,5 @@
 package com.mygdx.sonar_client;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
@@ -9,25 +7,45 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
 public class RadioOperator extends Role {
 
-    private Texture board;
     private Button markers[][];
+    private boolean mineMarkers[][];
 
     private Button up;
     private Button down;
     private Button left;
     private Button right;
     private Button clear;
+    private Button toggleMine;
+
+    private boolean mineMode;
 
     public RadioOperator(SpriteBatch batch) {
         super(batch);
-        board = new Texture(Gdx.files.internal("map.png"));
+        mineMode = false;
         markers = new Button[Settings.BOARD_GRID_LENGTH][Settings.BOARD_GRID_LENGTH];
         for(int i = 0; i < markers.length; i++) {
             for(int j = 0; j < markers[i].length; j++) {
                 markers[i][j] = new Button(Assets.buttonSkin, "marker");
                 markers[i][j].setSize(16, 16);
                 markers[i][j].setPosition(32*j + 68+583, 32*i + 56+84);
+                markers[i][j].addListener(new RadioOperatorGridListener(i, j) {
+                    @Override
+                    public void clicked(InputEvent e, float x, float y) {
+                        if(mineMode) {
+                            int i = getI();
+                            int j = getJ();
+                            mineMarkers[i][j] = !mineMarkers[i][j];
+                            markers[i][j].setChecked(!markers[i][j].isChecked());
+                        }
+                    }
+                });
                 stage.addActor(markers[i][j]);
+            }
+        }
+        mineMarkers = new boolean[Settings.BOARD_GRID_LENGTH][Settings.BOARD_GRID_LENGTH];
+        for(int i = 0; i < mineMarkers.length; i++) {
+            for(int j = 0; j < mineMarkers[i].length; j++) {
+                mineMarkers[i][j] = false;
             }
         }
 
@@ -36,18 +54,21 @@ public class RadioOperator extends Role {
         left = new Button(Assets.buttonSkin, "rad_op_left");
         right = new Button(Assets.buttonSkin, "rad_op_right");
         clear = new Button(Assets.buttonSkin, "rad_op_clear");
+        toggleMine = new Button(Assets.buttonSkin, "mine");
 
         up.setSize(40, 40);
         down.setSize(40, 40);
         left.setSize(40, 40);
         right.setSize(40, 40);
         clear.setSize(40, 40);
+        toggleMine.setSize(40, 40);
 
         up.setPosition(488, 389);
         down.setPosition(488, 299);
         left.setPosition(443, 344);
         right.setPosition(533, 344);
         clear.setPosition(488, 344);
+        toggleMine.setPosition(488, 434);
 
         up.addListener(new ClickListener() {
             @Override
@@ -79,12 +100,19 @@ public class RadioOperator extends Role {
                 clearAll();
             }
         });
+        toggleMine.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent e, float x, float y) {
+                toggleMineMode();
+            }
+        });
 
         stage.addActor(up);
         stage.addActor(down);
         stage.addActor(left);
         stage.addActor(right);
         stage.addActor(clear);
+        stage.addActor(toggleMine);
     }
 
     public void update() {
@@ -95,7 +123,16 @@ public class RadioOperator extends Role {
 
         batch.begin();
         batch.enableBlending();
-        batch.draw(board, 583, 84, Settings.BOARD_FOCUS_WIDTH, Settings.BOARD_FOCUS_HEIGHT);
+        batch.draw(Assets.board, 583, 84, Settings.BOARD_FOCUS_WIDTH, Settings.BOARD_FOCUS_HEIGHT);
+
+        for(int i = 0; i < mineMarkers.length; i++) {
+            for(int j = 0; j < mineMarkers[i].length; j++) {
+                if(mineMarkers[i][j]) {
+                    batch.draw(Assets.mine, 32*j + 64+583, 32*i + 52+85, 24, 24);
+                }
+            }
+        }
+
         batch.end();
 
         batch.begin();
@@ -191,6 +228,10 @@ public class RadioOperator extends Role {
                 markers[i][j].setChecked(false);
             }
         }
+    }
+
+    private void toggleMineMode() {
+        mineMode = !mineMode;
     }
 
 }

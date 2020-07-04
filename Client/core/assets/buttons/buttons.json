@@ -47,6 +47,13 @@ com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
 		up: rad_op_clear_unclicked,
 		down: rad_op_clear_clicked,
 		over: rad_op_clear_hover
+	},
+	mine: {
+		up: mine_button_unselected_unclicked,
+		down: mine_button_clicked,
+		over: mine_button_unselected_hover,
+		checked: mine_button_selected_unclicked,
+		checkedOver: mine_button_selected_hover
 	}
 }
 }

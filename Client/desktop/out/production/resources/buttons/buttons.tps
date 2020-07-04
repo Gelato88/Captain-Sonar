@@ -208,14 +208,24 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">textures/down_arrow.png</key>
-            <key type="filename">textures/down_arrow_hover.png</key>
-            <key type="filename">textures/left_arrow.png</key>
-            <key type="filename">textures/left_arrow_hover.png</key>
-            <key type="filename">textures/right_arrow.png</key>
-            <key type="filename">textures/right_arrow_hover.png</key>
-            <key type="filename">textures/up_arrow.png</key>
-            <key type="filename">textures/up_arrow_hover.png</key>
+            <key type="filename">textures/mine_button_clicked.png</key>
+            <key type="filename">textures/mine_button_hover.png</key>
+            <key type="filename">textures/mine_button_unclicked.png</key>
+            <key type="filename">textures/rad_op_clear_clicked.png</key>
+            <key type="filename">textures/rad_op_clear_hover.png</key>
+            <key type="filename">textures/rad_op_clear_unclicked.png</key>
+            <key type="filename">textures/rad_op_down_clicked.png</key>
+            <key type="filename">textures/rad_op_down_hover.png</key>
+            <key type="filename">textures/rad_op_down_unclicked.png</key>
+            <key type="filename">textures/rad_op_left_clicked.png</key>
+            <key type="filename">textures/rad_op_left_hover.png</key>
+            <key type="filename">textures/rad_op_left_unclicked.png</key>
+            <key type="filename">textures/rad_op_right_clicked.png</key>
+            <key type="filename">textures/rad_op_right_hover.png</key>
+            <key type="filename">textures/rad_op_right_unclicked.png</key>
+            <key type="filename">textures/rad_op_up_clicked.png</key>
+            <key type="filename">textures/rad_op_up_hover.png</key>
+            <key type="filename">textures/rad_op_up_unclicked.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
