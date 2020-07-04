@@ -41,6 +41,11 @@ public class Client extends ApplicationAdapter {
 	private Button chatDown;
 	private Button chatSend;
 
+	private Button roleCaptain;
+	private Button roleFirstMate;
+	private Button roleRadioOperator;
+	private Button roleEngineer;
+
 	private String messages[];
 	private int message = 0;
 
@@ -60,9 +65,8 @@ public class Client extends ApplicationAdapter {
 		layout = new GlyphLayout();
 		stage = new Stage();
 
-		Skin chatFieldSkin = new Skin(Gdx.files.internal("chat_field/chat_field.json"));
 
-		field = new TextField("testing", chatFieldSkin);
+		field = new TextField("", Assets.textFieldSkin);
 		field.setPosition(5, 5);
 		field.setSize(340, 20);
 
@@ -75,6 +79,44 @@ public class Client extends ApplicationAdapter {
 		chatDown.setPosition(Settings.CHAT_BOX_WIDTH - 25, 5);
 		chatUp.setPosition(Settings.CHAT_BOX_WIDTH - 25, Settings.CHAT_BOX_HEIGHT - 25);
 		chatSend.setPosition(350, 5);
+
+		roleCaptain = new Button(Assets.buttonSkin, "role_select_captain");
+		roleFirstMate = new Button(Assets.buttonSkin, "role_select_first_mate");
+		roleRadioOperator = new Button(Assets.buttonSkin, "role_select_radio_operator");
+		roleEngineer = new Button(Assets.buttonSkin, "role_select_engineer");
+		roleCaptain.setSize(160, 80);
+		roleFirstMate.setSize(160, 80);
+		roleRadioOperator.setSize(160, 80);
+		roleEngineer.setSize(160, 80);
+		roleCaptain.setPosition(Settings.RES_WIDTH/2 - 320-15, 600);
+		roleFirstMate.setPosition(Settings.RES_WIDTH/2 - 160-5, 600);
+		roleRadioOperator.setPosition(Settings.RES_WIDTH/2 + 5, 600);
+		roleEngineer.setPosition(Settings.RES_WIDTH/2 + 160+15, 600);
+
+		roleCaptain.addListener(new ClickListener() {
+			@Override
+			public void clicked(InputEvent e, float x, float y) {
+				selectCaptin();
+			}
+		});
+		roleFirstMate.addListener(new ClickListener() {
+			@Override
+			public void clicked(InputEvent e, float x, float y) {
+				selectFirstMate();
+			}
+		});
+		roleRadioOperator.addListener(new ClickListener() {
+			@Override
+			public void clicked(InputEvent e, float x, float y) {
+				selectRadioOperator();
+			}
+		});
+		roleEngineer.addListener(new ClickListener() {
+			@Override
+			public void clicked(InputEvent e, float x, float y) {
+				selectEngineer();
+			}
+		});
 
 		chatDown.addListener(new ClickListener() {
 			@Override
@@ -100,15 +142,19 @@ public class Client extends ApplicationAdapter {
 		stage.addActor(chatSend);
 		stage.addActor(field);
 
+		stage.addActor(roleCaptain);
+		stage.addActor(roleFirstMate);
+		stage.addActor(roleRadioOperator);
+		stage.addActor(roleEngineer);
+
 		messages = new String[Settings.CHAT_HISTORY_LENGTH];
 		for(int i = 0; i < messages.length; i++) {
 			messages[i] = "";
 		}
 
-		role = new RadioOperator(batch);
+		//role = new RadioOperator(batch);
 
 		inputMultiplexer.addProcessor(stage);
-		inputMultiplexer.addProcessor(role.getStage());
 		Gdx.input.setInputProcessor(inputMultiplexer);
 
 		try {
@@ -123,6 +169,27 @@ public class Client extends ApplicationAdapter {
 		} catch(IOException e) {
 			System.out.println("I/O error: " + e.getMessage());
 		}
+
+	}
+
+	public void selectCaptin() {
+
+	}
+
+	public void selectFirstMate() {
+
+	}
+
+	public void selectRadioOperator() {
+		role = new RadioOperator(batch);
+		inputMultiplexer.addProcessor(role.getStage());
+		roleCaptain.remove();
+		roleFirstMate.remove();
+		roleRadioOperator.remove();
+		roleEngineer.remove();
+	}
+
+	public void selectEngineer() {
 
 	}
 
@@ -188,10 +255,6 @@ public class Client extends ApplicationAdapter {
 
 		batch.begin();
 		batch.enableBlending();
-
-		font.getData().setScale(1f);
-		layout.setText(font, "texting is epic and making a good gui is for losers");
-		font.draw(batch, layout, 700, 50);
 
 		font.setColor(Color.WHITE);
 		for(int i = 0; i < Settings.CHAT_HEIGHT; i++) {

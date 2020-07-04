@@ -1,5 +1,5 @@
 buttons.png
-size: 480, 1440
+size: 1920, 1920
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -47,204 +47,288 @@ chat_send_hover
   index: -1
 chat_send_unclicked
   rotate: false
-  xy: 0, 80
+  xy: 480, 0
   size: 80, 80
   orig: 80, 80
   offset: 0, 0
   index: -1
 chat_up_clicked
   rotate: false
-  xy: 80, 80
+  xy: 560, 0
   size: 80, 80
   orig: 80, 80
   offset: 0, 0
   index: -1
 chat_up_disabled
   rotate: false
-  xy: 160, 80
+  xy: 640, 0
   size: 80, 80
   orig: 80, 80
   offset: 0, 0
   index: -1
 chat_up_hover
   rotate: false
-  xy: 240, 80
+  xy: 720, 0
   size: 80, 80
   orig: 80, 80
   offset: 0, 0
   index: -1
 chat_up_unclicked
   rotate: false
-  xy: 320, 80
+  xy: 800, 0
   size: 80, 80
   orig: 80, 80
   offset: 0, 0
   index: -1
 marker_blank
   rotate: false
-  xy: 400, 80
+  xy: 880, 0
   size: 80, 80
   orig: 80, 80
   offset: 0, 0
   index: -1
 marker_blank_hover
   rotate: false
-  xy: 0, 160
+  xy: 960, 0
   size: 80, 80
   orig: 80, 80
   offset: 0, 0
   index: -1
 marker_marked
   rotate: false
-  xy: 80, 160
+  xy: 1040, 0
   size: 80, 80
   orig: 80, 80
   offset: 0, 0
   index: -1
 marker_marked_hover
   rotate: false
-  xy: 160, 160
+  xy: 1120, 0
   size: 80, 80
   orig: 80, 80
   offset: 0, 0
   index: -1
 mine_button_clicked
   rotate: false
-  xy: 240, 160
+  xy: 1200, 0
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
 mine_button_selected_hover
   rotate: false
-  xy: 0, 320
+  xy: 1360, 0
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
 mine_button_selected_unclicked
   rotate: false
-  xy: 160, 320
+  xy: 1520, 0
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
 mine_button_unselected_hover
   rotate: false
-  xy: 320, 320
+  xy: 1680, 0
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
 mine_button_unselected_unclicked
   rotate: false
-  xy: 0, 480
+  xy: 0, 160
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
 rad_op_clear_clicked
   rotate: false
-  xy: 160, 480
+  xy: 160, 160
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
 rad_op_clear_hover
   rotate: false
-  xy: 320, 480
+  xy: 320, 160
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
 rad_op_clear_unclicked
   rotate: false
-  xy: 0, 640
+  xy: 480, 160
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
 rad_op_down_clicked
   rotate: false
-  xy: 160, 640
+  xy: 640, 160
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
 rad_op_down_hover
   rotate: false
-  xy: 320, 640
+  xy: 800, 160
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
 rad_op_down_unclicked
   rotate: false
-  xy: 0, 800
+  xy: 960, 160
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
 rad_op_left_clicked
   rotate: false
-  xy: 160, 800
+  xy: 1120, 160
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
 rad_op_left_hover
   rotate: false
-  xy: 320, 800
+  xy: 1280, 160
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
 rad_op_left_unclicked
   rotate: false
-  xy: 0, 960
+  xy: 1440, 160
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
 rad_op_right_clicked
   rotate: false
-  xy: 160, 960
+  xy: 1600, 160
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
 rad_op_right_hover
   rotate: false
-  xy: 320, 960
+  xy: 1760, 160
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
 rad_op_right_unclicked
   rotate: false
-  xy: 0, 1120
+  xy: 0, 320
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
 rad_op_up_clicked
   rotate: false
-  xy: 160, 1120
+  xy: 160, 320
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
 rad_op_up_hover
   rotate: false
-  xy: 320, 1120
+  xy: 320, 320
   size: 160, 160
   orig: 160, 160
   offset: 0, 0
   index: -1
 rad_op_up_unclicked
   rotate: false
-  xy: 0, 1280
+  xy: 480, 320
   size: 160, 160
   orig: 160, 160
+  offset: 0, 0
+  index: -1
+role_select_captain_clicked
+  rotate: false
+  xy: 640, 320
+  size: 640, 320
+  orig: 640, 320
+  offset: 0, 0
+  index: -1
+role_select_captain_hover
+  rotate: false
+  xy: 1280, 320
+  size: 640, 320
+  orig: 640, 320
+  offset: 0, 0
+  index: -1
+role_select_captain_unclicked
+  rotate: false
+  xy: 0, 640
+  size: 640, 320
+  orig: 640, 320
+  offset: 0, 0
+  index: -1
+role_select_engineer_clicked
+  rotate: false
+  xy: 640, 640
+  size: 640, 320
+  orig: 640, 320
+  offset: 0, 0
+  index: -1
+role_select_engineer_hover
+  rotate: false
+  xy: 1280, 640
+  size: 640, 320
+  orig: 640, 320
+  offset: 0, 0
+  index: -1
+role_select_engineer_unclicked
+  rotate: false
+  xy: 0, 960
+  size: 640, 320
+  orig: 640, 320
+  offset: 0, 0
+  index: -1
+role_select_first_mate_clicked
+  rotate: false
+  xy: 640, 960
+  size: 640, 320
+  orig: 640, 320
+  offset: 0, 0
+  index: -1
+role_select_first_mate_hover
+  rotate: false
+  xy: 1280, 960
+  size: 640, 320
+  orig: 640, 320
+  offset: 0, 0
+  index: -1
+role_select_first_mate_unclicked
+  rotate: false
+  xy: 0, 1280
+  size: 640, 320
+  orig: 640, 320
+  offset: 0, 0
+  index: -1
+role_select_radio_operator_clicked
+  rotate: false
+  xy: 640, 1280
+  size: 640, 320
+  orig: 640, 320
+  offset: 0, 0
+  index: -1
+role_select_radio_operator_hover
+  rotate: false
+  xy: 1280, 1280
+  size: 640, 320
+  orig: 640, 320
+  offset: 0, 0
+  index: -1
+role_select_radio_operator_unclicked
+  rotate: false
+  xy: 0, 1600
+  size: 640, 320
+  orig: 640, 320
   offset: 0, 0
   index: -1

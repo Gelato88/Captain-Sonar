@@ -209,8 +209,10 @@
                 <false/>
             </struct>
             <key type="filename">textures/mine_button_clicked.png</key>
-            <key type="filename">textures/mine_button_hover.png</key>
-            <key type="filename">textures/mine_button_unclicked.png</key>
+            <key type="filename">textures/mine_button_selected_hover.png</key>
+            <key type="filename">textures/mine_button_selected_unclicked.png</key>
+            <key type="filename">textures/mine_button_unselected_hover.png</key>
+            <key type="filename">textures/mine_button_unselected_unclicked.png</key>
             <key type="filename">textures/rad_op_clear_clicked.png</key>
             <key type="filename">textures/rad_op_clear_hover.png</key>
             <key type="filename">textures/rad_op_clear_unclicked.png</key>
