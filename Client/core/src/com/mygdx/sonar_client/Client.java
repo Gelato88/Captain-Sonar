@@ -201,7 +201,9 @@ public class Client extends ApplicationAdapter {
 
 		batch.end();
 
-		role.update();
+		if(!(role == null)) {
+			role.update();
+		}
 
 		batch.begin();
 		batch.enableBlending();
@@ -213,7 +215,9 @@ public class Client extends ApplicationAdapter {
 	@Override
 	public void resize(int width, int height) {
 		stage.getViewport().update(width, height, true);
-		role.getStage().getViewport().update(width, height, true);
+		if(!(role == null)) {
+			role.getStage().getViewport().update(width, height, true);
+		}
 	}
 	
 	@Override

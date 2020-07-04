@@ -17,6 +17,26 @@ com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
 		down: chat_send_clicked,
 		over: chat_send_hover
 	},
+	role_select_captain: {
+		up: role_select_captain_unclicked,
+		down: role_select_captain_clicked,
+		over: role_select_captain_hover
+	},
+	role_select_first_mate: {
+		up: role_select_first_mate_unclicked,
+		down: role_select_first_mate_clicked,
+		over: role_select_first_mate_hover
+	},
+	role_select_radio_operator: {
+		up: role_select_radio_operator_unclicked,
+		down: role_select_radio_operator_clicked,
+		over: role_select_radio_operator_hover
+	},
+	role_select_engineer: {
+		up: role_select_engineer_unclicked,
+		down: role_select_engineer_clicked,
+		over: role_select_engineer_hover
+	},
 	marker: {
 		up: marker_blank,
 		checked: marker_marked,
