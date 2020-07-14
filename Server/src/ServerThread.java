@@ -34,9 +34,15 @@ public class ServerThread extends Thread {
                 System.out.println(name + ": " + text);
                 sendToAll(text);
 
-                if(text.equals("close server")) {
-                    Main.sendFromServerToAll("Shutting down...");
-                    Main.quit();
+                switch(text) {
+                    case "close server":
+                        Main.sendFromServerToAll("Shutting down...");
+                        Main.quit();
+                        break;
+                    case "~assign-role":
+                        int teamNum = reader.read();
+                        int roleNum = reader.read();
+                        Main.joinTeam(teamNum, roleNum, this);
                 }
 
             } while(!text.equals("exit") && running);

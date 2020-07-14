@@ -15,7 +15,6 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
-import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.TextField;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
@@ -96,7 +95,7 @@ public class Client extends ApplicationAdapter {
 		roleCaptain.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent e, float x, float y) {
-				selectCaptin();
+				selectCaptain();
 			}
 		});
 		roleFirstMate.addListener(new ClickListener() {
@@ -152,8 +151,6 @@ public class Client extends ApplicationAdapter {
 			messages[i] = "";
 		}
 
-		//role = new RadioOperator(batch);
-
 		inputMultiplexer.addProcessor(stage);
 		Gdx.input.setInputProcessor(inputMultiplexer);
 
@@ -172,7 +169,7 @@ public class Client extends ApplicationAdapter {
 
 	}
 
-	public void selectCaptin() {
+	public void selectCaptain() {
 
 	}
 

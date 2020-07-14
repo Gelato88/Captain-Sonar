@@ -240,6 +240,30 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">textures/role_select_captain_clicked.png</key>
+            <key type="filename">textures/role_select_captain_hover.png</key>
+            <key type="filename">textures/role_select_captain_unclicked.png</key>
+            <key type="filename">textures/role_select_engineer_clicked.png</key>
+            <key type="filename">textures/role_select_engineer_hover.png</key>
+            <key type="filename">textures/role_select_engineer_unclicked.png</key>
+            <key type="filename">textures/role_select_first_mate_clicked.png</key>
+            <key type="filename">textures/role_select_first_mate_hover.png</key>
+            <key type="filename">textures/role_select_first_mate_unclicked.png</key>
+            <key type="filename">textures/role_select_radio_operator_clicked.png</key>
+            <key type="filename">textures/role_select_radio_operator_hover.png</key>
+            <key type="filename">textures/role_select_radio_operator_unclicked.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>160,80,320,160</rect>
+                <key>scale9Paddings</key>
+                <rect>160,80,320,160</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
         </map>
         <key>fileList</key>
         <array>
